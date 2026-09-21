@@ -1,5 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import WhatsAppFAB from "@/components/WhatsAppFAB";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -42,9 +46,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} antialiased`}>
-      <body className="min-h-screen flex flex-col bg-charcoal-950 text-white">
-        {children}
+    <html lang="en" className={`${inter.variable} antialiased`} suppressHydrationWarning>
+      <body className="min-h-screen flex flex-col bg-white dark:bg-charcoal-950 text-gray-900 dark:text-white transition-colors duration-300">
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+          <WhatsAppFAB />
+        </ThemeProvider>
       </body>
     </html>
   );

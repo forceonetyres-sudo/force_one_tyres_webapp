@@ -9,28 +9,28 @@ const categories = [
     title: "EV Tyres",
     description:
       "Engineered for electric vehicles — low noise, high load capacity, optimized rolling resistance.",
-    image: "/assets/ev-tyre.jpg",
+    image: "/assets/winrun/winrun_1.jpeg",
   },
   {
     id: "sedan-tyres",
     title: "Standard & Sedan",
     description:
       "Premium comfort and reliability for everyday driving, from city streets to highways.",
-    image: "/assets/category-sedan.jpg",
+    image: "/assets/brands/gepormax/entro-cs1.jpg",
   },
   {
     id: "suv-tyres",
     title: "SUV & 4x4",
     description:
       "All-terrain capability meets highway comfort. Built tough for Dubai's diverse landscapes.",
-    image: "/assets/category-suv.jpg",
+    image: "/assets/brands/gepormax/enterra-at.jpg",
   },
   {
     id: "performance-tyres",
     title: "Performance / Sports",
     description:
       "Ultra-high-performance rubber for maximum grip, precision handling, and track-ready confidence.",
-    image: "/assets/category-performance.jpg",
+    image: "/assets/winrun/winrun_4.jpeg",
   },
 ];
 
@@ -93,15 +93,14 @@ export default function CategoryGrid() {
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Image */}
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-56 overflow-hidden bg-white">
                 <Image
                   src={cat.image}
                   alt={cat.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-contain p-4 transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-800 via-charcoal-800/20 to-transparent" />
               </div>
 
               {/* Text */}
