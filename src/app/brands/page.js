@@ -12,8 +12,10 @@ export default function BrandsHubPage() {
       name: "Accelera",
       path: "/brands/accelera",
       description: "High-performance and passenger tyres designed for elegance and safety.",
-      logo: "/assets/Logo/accelera/Accelera_white.jpg",
-      logoLight: "/assets/Logo/accelera/Accelera_black.jpg"
+      logo: "/assets/Logo/accelera/Accelera_logo.png",
+      logoLight: "/assets/Logo/accelera/Accelera_logo.png",
+      darkClass: "brightness-0 invert",
+      lightClass: "brightness-0"
     },
     {
       name: "Winrun",
@@ -61,8 +63,8 @@ export default function BrandsHubPage() {
               <div className="h-48 w-full bg-gray-100 dark:bg-charcoal-950 flex items-center justify-center p-8 relative">
                 {brand.logo ? (
                   <>
-                    <Image src={brand.logo} alt={`${brand.name} Logo`} fill className="object-contain p-8 hidden dark:block transition-transform duration-500 group-hover:scale-110" />
-                    <Image src={brand.logoLight || brand.logo} alt={`${brand.name} Logo`} fill className="object-contain p-8 dark:hidden transition-transform duration-500 group-hover:scale-110" />
+                    <Image src={brand.logo} alt={`${brand.name} Logo`} fill className={`object-contain p-8 hidden dark:block transition-transform duration-500 group-hover:scale-110 ${brand.darkClass || ''}`} />
+                    <Image src={brand.logoLight || brand.logo} alt={`${brand.name} Logo`} fill className={`object-contain p-8 dark:hidden transition-transform duration-500 group-hover:scale-110 ${brand.lightClass || ''}`} />
                   </>
                 ) : (
                   <span className="text-3xl font-extrabold text-gray-400 dark:text-gray-600 group-hover:text-accent-500 dark:group-hover:text-accent-400 transition-colors uppercase tracking-widest">{brand.name}</span>

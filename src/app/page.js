@@ -7,37 +7,37 @@ export default function Home() {
       {/* 1. Hero Section */}
       <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image 
-            src="/assets/hero-car.jpg" 
-            alt="Premium Car" 
-            fill 
+          <Image
+            src="/assets/services/tyre-fitting.jpg"
+            alt="Premium Tyre Fitting Service"
+            fill
             className="object-cover object-center"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-800/50 dark:from-charcoal-950/90 dark:to-charcoal-900/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/40 dark:from-black/90 dark:to-black/60 backdrop-blur-[2px]"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center sm:text-left">
           <div className="max-w-3xl">
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
               Force One Tyres
             </h1>
             <p className="text-xl sm:text-2xl text-gray-200 dark:text-gray-300 mb-10 animate-fade-in-up font-light" style={{ animationDelay: '0.3s' }}>
-              Premium Quality. Unmatched Performance.<br className="hidden sm:block"/>
+              Premium Quality. Unmatched Performance.<br className="hidden sm:block" />
               Expert fitting and alignment in Dubai.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row items-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <Link 
-                href="https://wa.me/971545141499" 
+              <Link
+                href="https://wa.me/971545141499"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-[#25D366] hover:bg-[#1ebd59] rounded-full shadow-lg transition-transform hover:-translate-y-1"
               >
                 Connect on WhatsApp
               </Link>
-              <Link 
-                href="/brands" 
+              <Link
+                href="/brands"
                 className="w-full sm:w-auto flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 dark:hover:text-charcoal-950 rounded-full transition-colors"
               >
                 Explore Brands
@@ -53,33 +53,40 @@ export default function Home() {
           <h2 className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest font-semibold mb-8">
             Proudly Representing Premium Brands
           </h2>
-          <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16">
-            
+          <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center items-center gap-8 md:gap-16 pb-4">
+
             <Link href="/brands/accelera" className="group flex flex-col items-center">
-              <div className="h-16 w-40 relative grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-                <Image src="/assets/Logo/accelera/Accelera_black.jpg" alt="Accelera Logo" fill className="object-contain dark:hidden" />
-                <Image src="/assets/Logo/accelera/Accelera_white.jpg" alt="Accelera Logo" fill className="object-contain hidden dark:block" />
+              <div className="relative transform group-hover:scale-110 transition-transform duration-500 flex flex-col items-center">
+                <div className="h-16 md:h-20 w-40 md:w-56 relative mb-4">
+                  <Image src="/assets/Logo/accelera/Accelera_logo.png" alt="Accelera Logo" fill className="object-contain brightness-0 dark:invert" />
+                </div>
               </div>
             </Link>
 
             <Link href="/brands/winrun" className="group flex flex-col items-center">
-              <div className="h-16 w-40 relative grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-                <Image src="/assets/Logo/winrun/Winrun_logo.png" alt="Winrun Logo" fill className="object-contain" />
+              <div className="relative transform group-hover:scale-110 transition-transform duration-500 flex flex-col items-center">
+                <div className="h-16 md:h-20 w-40 md:w-56 relative mb-4">
+                  <Image src="/assets/Logo/winrun/Winrun_logo.png" alt="Winrun Logo" fill className="object-contain" />
+                </div>
               </div>
             </Link>
-            
+
             <Link href="/brands/gepormax" className="group flex flex-col items-center">
-              <div className="h-16 w-40 relative grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-                <Image src="/assets/Logo/gepormax/Gepormax.png" alt="Gepormax Logo" fill className="object-contain" />
+              <div className="relative transform group-hover:scale-110 transition-transform duration-500 flex flex-col items-center">
+                <div className="h-16 md:h-20 w-40 md:w-56 relative mb-4">
+                  <Image src="/assets/Logo/gepormax/Gepormax.png" alt="Gepormax Logo" fill className="object-contain" />
+                </div>
               </div>
             </Link>
-            
+
             <Link href="/brands/duraman" className="group flex flex-col items-center">
-              <div className="h-16 w-40 relative grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300">
-                <Image src="/assets/Logo/duraman/Duraman.svg" alt="Duraman Logo" fill className="object-contain" />
+              <div className="relative transform group-hover:scale-110 transition-transform duration-500 flex flex-col items-center">
+                <div className="h-16 md:h-20 w-40 md:w-56 relative mb-4">
+                  <Image src="/assets/Logo/duraman/Duraman.svg" alt="Duraman Logo" fill className="object-contain" />
+                </div>
               </div>
             </Link>
-            
+
           </div>
         </div>
       </section>
@@ -202,9 +209,9 @@ export default function Home() {
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-                
+                {/* Dark overlay for contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
@@ -238,7 +245,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            
+
             {/* Service 1 */}
             <div className="bg-gray-50 dark:bg-charcoal-900 border border-gray-200 dark:border-charcoal-800 p-8 rounded-2xl hover:border-accent-500 dark:hover:border-accent-400 transition-colors group shadow-sm dark:shadow-none">
               <div className="w-16 h-16 bg-white dark:bg-charcoal-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent-50 dark:group-hover:bg-accent-400/20 transition-colors border border-gray-100 dark:border-transparent">
@@ -291,7 +298,7 @@ export default function Home() {
                 Safe, industry-standard puncture repairs and comprehensive tyre health assessments.
               </p>
             </div>
-            
+
           </div>
 
           <div className="text-center mt-10">
@@ -374,16 +381,16 @@ export default function Home() {
       {/* 7. CTA Banner */}
       <section className="w-full bg-white dark:bg-charcoal-950 py-20 transition-colors duration-300">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 dark:from-charcoal-900 dark:to-charcoal-800 rounded-3xl p-10 md:p-16 overflow-hidden text-center border border-gray-700 dark:border-charcoal-700">
+          <div className="relative bg-white dark:bg-charcoal-900 rounded-3xl p-10 md:p-16 overflow-hidden text-center border border-gray-200 dark:border-charcoal-800 shadow-xl dark:shadow-none">
             {/* Decorative elements */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent-500/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-500/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
-            
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent-500/5 dark:bg-accent-500/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-accent-500/5 dark:bg-accent-500/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+
             <div className="relative z-10">
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
                 Need Tyres Today?
               </h2>
-              <p className="text-gray-300 text-lg mb-10 max-w-xl mx-auto">
+              <p className="text-gray-600 dark:text-gray-300 text-lg mb-10 max-w-xl mx-auto">
                 Get expert advice and fast fitting. Reach out to our team and drive away with confidence — same day service available.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -400,7 +407,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="tel:+971545141499"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-white bg-transparent border-2 border-white/30 hover:border-white hover:bg-white/10 rounded-full transition-all duration-300"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-bold text-gray-700 dark:text-white bg-transparent border-2 border-gray-300 dark:border-white/30 hover:border-gray-900 dark:hover:border-white hover:bg-gray-50 dark:hover:bg-white/10 rounded-full transition-all duration-300"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

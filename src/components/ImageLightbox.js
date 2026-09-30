@@ -14,10 +14,10 @@ export default function ImageLightbox({ src, alt, brandName, patternName }) {
   return (
     <>
       <div 
-        className="relative group cursor-pointer overflow-hidden rounded-xl bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-charcoal-700 shadow-sm dark:shadow-lg hover:shadow-md transition-shadow"
+        className="relative group cursor-pointer overflow-hidden rounded-xl bg-white dark:bg-charcoal-800 border border-gray-200 dark:border-charcoal-700 shadow-sm dark:shadow-lg hover:shadow-xl hover:border-accent-500 dark:hover:border-accent-500 transition-all duration-300"
         onClick={() => setIsOpen(true)}
       >
-        <div className="aspect-[4/3] relative w-full h-full bg-white flex items-center justify-center">
+        <div className="aspect-[4/3] relative w-full h-full bg-gradient-to-tr from-gray-100 to-white dark:from-[#0a192f] dark:to-[#112240] flex items-center justify-center">
           <Image 
             src={src} 
             alt={alt} 
