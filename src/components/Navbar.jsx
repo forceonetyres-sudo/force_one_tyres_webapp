@@ -116,7 +116,8 @@ export default function Navbar() {
             
             <Link href="#contact" className="text-base font-bold text-gray-700 dark:text-gray-200 hover:text-accent-600 dark:hover:text-accent-400 transition-colors">Contact</Link>
             
-            {/* Theme Toggle */}
+            {/* Theme Toggle (Temporarily disabled as requested) */}
+            {/*
             <button
               suppressHydrationWarning
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
@@ -129,10 +130,12 @@ export default function Navbar() {
                 <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
               )}
             </button>
+            */}
           </div>
 
           <div className="md:hidden flex items-center space-x-2">
-            {/* Theme Toggle Mobile */}
+            {/* Theme Toggle Mobile (Temporarily disabled) */}
+            {/*
             <button
               suppressHydrationWarning
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
@@ -145,6 +148,7 @@ export default function Navbar() {
                 <svg className="w-5 h-5 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
               )}
             </button>
+            */}
             
             <div className="relative" ref={mobileDropdownRef}>
               <button 

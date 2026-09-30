@@ -5,6 +5,7 @@ export default function BrandPageTemplate({ brand }) {
   const { 
     name, 
     logoUrl, 
+    logoClassName,
     tagline, 
     description, 
     heroImage, 
@@ -17,26 +18,26 @@ export default function BrandPageTemplate({ brand }) {
       
       {/* 1. Brand Hero (Split Corporate Layout) */}
       <section className="relative w-full bg-white dark:bg-charcoal-950 overflow-hidden transition-colors duration-300 border-b border-gray-100 dark:border-charcoal-900">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-stretch min-h-[60vh]">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-stretch min-h-[50vh] md:min-h-[60vh]">
           
           {/* Left Content Column */}
-          <div className="w-full lg:w-1/2 flex items-center px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
-            <div className="max-w-xl text-center lg:text-left">
-              <div className="h-20 w-56 relative mb-8 mx-auto lg:mx-0">
-                <Image src={logoUrl} alt={`${name} Logo`} fill className="object-contain" priority />
+          <div className="w-full md:w-1/2 flex items-center px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-24">
+            <div className="max-w-xl text-center md:text-left">
+              <div className="h-16 md:h-20 w-48 md:w-56 relative mb-6 md:mb-8 mx-auto md:mx-0">
+                <Image src={logoUrl} alt={`${name} Logo`} fill className={`object-contain ${logoClassName || ''}`} priority />
               </div>
               
-              <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-6 animate-fade-in-up">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4 md:mb-6 animate-fade-in-up">
                 {tagline}
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 animate-fade-in-up font-light leading-relaxed" style={{ animationDelay: '0.2s' }}>
+              <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 mb-8 md:mb-10 animate-fade-in-up font-light leading-relaxed" style={{ animationDelay: '0.2s' }}>
                 {description}
               </p>
               
               <div className="animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
                 <Link 
                   href="#flagship-tyres" 
-                  className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-accent-600 hover:bg-accent-500 rounded-full shadow-lg transition-transform hover:-translate-y-1"
+                  className="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-bold text-white bg-accent-600 hover:bg-accent-500 rounded-full shadow-lg transition-transform hover:-translate-y-1"
                 >
                   View Flagship Tyres
                   <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -48,8 +49,8 @@ export default function BrandPageTemplate({ brand }) {
           </div>
 
           {/* Right Image Column */}
-          <div className="w-full lg:w-1/2 relative min-h-[40vh] sm:min-h-[50vh] lg:min-h-0 mt-8 lg:mt-0 flex items-center justify-center lg:justify-end">
-            <div className="absolute inset-0 lg:left-8 lg:inset-y-12 lg:-right-32 overflow-hidden rounded-3xl lg:rounded-l-3xl lg:rounded-r-none shadow-2xl border-4 lg:border-r-0 border-white dark:border-charcoal-800 lg:ml-8 mx-4 lg:mx-0 bg-gray-100 dark:bg-charcoal-900 flex items-center justify-center">
+          <div className="w-full md:w-1/2 relative min-h-[35vh] sm:min-h-[40vh] md:min-h-0 mt-6 md:mt-0 flex items-center justify-center md:justify-end">
+            <div className="absolute inset-0 md:left-6 lg:left-8 md:inset-y-8 lg:inset-y-12 md:-right-16 lg:-right-32 overflow-hidden rounded-2xl md:rounded-l-3xl md:rounded-r-none shadow-2xl border-4 md:border-r-0 border-white dark:border-charcoal-800 md:ml-4 lg:ml-8 mx-4 md:mx-0 bg-gray-100 dark:bg-charcoal-900 flex items-center justify-center">
               {heroImage ? (
                 <Image 
                   src={heroImage} 
@@ -60,8 +61,8 @@ export default function BrandPageTemplate({ brand }) {
                 />
               ) : (
                 <div className="text-gray-400 dark:text-gray-500 flex flex-col items-center">
-                  <svg className="w-16 h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                  <p>[ Hero Image Placeholder ]</p>
+                  <svg className="w-12 h-12 md:w-16 md:h-16 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                  <p className="text-sm md:text-base">[ Hero Image Placeholder ]</p>
                 </div>
               )}
             </div>
@@ -136,7 +137,7 @@ export default function BrandPageTemplate({ brand }) {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {flagshipTyres.map((tyre, index) => (
               <div key={index} className="bg-gray-50 dark:bg-charcoal-900 border border-gray-200 dark:border-charcoal-800 rounded-2xl overflow-hidden hover:shadow-xl dark:hover:shadow-none hover:border-accent-500 dark:hover:border-accent-400 transition-all duration-300 flex flex-col group">
                 

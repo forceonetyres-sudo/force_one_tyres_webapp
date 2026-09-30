@@ -1,51 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeroCarousel from "@/components/HeroCarousel";
 
 export default function Home() {
   return (
     <div className="w-full transition-colors duration-300">
-      {/* 1. Hero Section */}
-      <section className="relative w-full h-[80vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/assets/services/tyre-fitting.jpg"
-            alt="Premium Tyre Fitting Service"
-            fill
-            className="object-cover object-center"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/40 dark:from-black/90 dark:to-black/60 backdrop-blur-[2px]"></div>
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center sm:text-left">
-          <div className="max-w-3xl">
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white tracking-tight mb-6 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-              Force One Tyres
-            </h1>
-            <p className="text-xl sm:text-2xl text-gray-200 dark:text-gray-300 mb-10 animate-fade-in-up font-light" style={{ animationDelay: '0.3s' }}>
-              Premium Quality. Unmatched Performance.<br className="hidden sm:block" />
-              Expert fitting and alignment in Dubai.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center sm:justify-start space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
-              <Link
-                href="https://wa.me/971545141499"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-[#25D366] hover:bg-[#1ebd59] rounded-full shadow-lg transition-transform hover:-translate-y-1"
-              >
-                Connect on WhatsApp
-              </Link>
-              <Link
-                href="/brands"
-                className="w-full sm:w-auto flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 dark:hover:text-charcoal-950 rounded-full transition-colors"
-              >
-                Explore Brands
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* 1. Hero Carousel */}
+      <HeroCarousel />
 
       {/* 2. Brand Trust Bar (Logo Garden) */}
       <section className="w-full bg-gray-50 dark:bg-charcoal-900 py-12 border-b border-gray-200 dark:border-charcoal-800 transition-colors duration-300">
@@ -53,11 +14,11 @@ export default function Home() {
           <h2 className="text-gray-500 dark:text-gray-400 text-sm uppercase tracking-widest font-semibold mb-8">
             Proudly Representing Premium Brands
           </h2>
-          <div className="grid grid-cols-2 md:flex md:flex-wrap justify-center items-center gap-8 md:gap-16 pb-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 justify-items-center items-center gap-8 lg:gap-16 pb-4">
 
             <Link href="/brands/accelera" className="group flex flex-col items-center">
               <div className="relative transform group-hover:scale-110 transition-transform duration-500 flex flex-col items-center">
-                <div className="h-16 md:h-20 w-40 md:w-56 relative mb-4">
+                <div className="h-16 md:h-20 w-32 md:w-40 lg:w-56 relative mb-4">
                   <Image src="/assets/Logo/accelera/Accelera_logo.png" alt="Accelera Logo" fill className="object-contain brightness-0 dark:invert" />
                 </div>
               </div>
@@ -65,7 +26,7 @@ export default function Home() {
 
             <Link href="/brands/winrun" className="group flex flex-col items-center">
               <div className="relative transform group-hover:scale-110 transition-transform duration-500 flex flex-col items-center">
-                <div className="h-16 md:h-20 w-40 md:w-56 relative mb-4">
+                <div className="h-16 md:h-20 w-32 md:w-40 lg:w-56 relative mb-4">
                   <Image src="/assets/Logo/winrun/Winrun_logo.png" alt="Winrun Logo" fill className="object-contain" />
                 </div>
               </div>
@@ -73,7 +34,7 @@ export default function Home() {
 
             <Link href="/brands/gepormax" className="group flex flex-col items-center">
               <div className="relative transform group-hover:scale-110 transition-transform duration-500 flex flex-col items-center">
-                <div className="h-16 md:h-20 w-40 md:w-56 relative mb-4">
+                <div className="h-16 md:h-20 w-32 md:w-40 lg:w-56 relative mb-4">
                   <Image src="/assets/Logo/gepormax/Gepormax.png" alt="Gepormax Logo" fill className="object-contain" />
                 </div>
               </div>
@@ -81,7 +42,7 @@ export default function Home() {
 
             <Link href="/brands/duraman" className="group flex flex-col items-center">
               <div className="relative transform group-hover:scale-110 transition-transform duration-500 flex flex-col items-center">
-                <div className="h-16 md:h-20 w-40 md:w-56 relative mb-4">
+                <div className="h-16 md:h-20 w-32 md:w-40 lg:w-56 relative mb-4">
                   <Image src="/assets/Logo/duraman/Duraman.svg" alt="Duraman Logo" fill className="object-contain" />
                 </div>
               </div>
@@ -91,7 +52,71 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Why Choose Us — Stats / USPs */}
+      {/* 3. About Us - Who We Are */}
+      <section className="relative w-full bg-white dark:bg-charcoal-950 py-20 transition-colors duration-300 border-b border-gray-100 dark:border-charcoal-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            
+            {/* Image Side */}
+            <div className="w-full lg:w-1/2 relative h-[400px] sm:h-[500px] rounded-3xl overflow-hidden shadow-2xl group">
+              <Image 
+                src="/assets/accelera/Omikron A-T/Porsche Cayyene with Omikron A-T/7.jpg" 
+                alt="Force One Tyres Workshop" 
+                fill 
+                className="object-cover object-center group-hover:scale-105 transition-transform duration-700" 
+              />
+              {/* Overlay Badge - No white background card */}
+              <div className="absolute bottom-6 left-6 p-4 drop-shadow-2xl">
+                <div className="text-4xl sm:text-5xl font-extrabold text-white mb-1 tracking-tight" style={{ textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}>10+</div>
+                <div className="text-sm sm:text-base font-bold text-gray-100 uppercase tracking-widest" style={{ textShadow: '0 2px 8px rgba(0,0,0,0.8)' }}>Years of Trust</div>
+              </div>
+            </div>
+
+            {/* Content Side */}
+            <div className="w-full lg:w-1/2">
+              <div className="inline-block bg-gray-100 dark:bg-charcoal-900 px-4 py-2 rounded-full mb-6">
+                <span className="text-accent-600 dark:text-accent-400 font-bold text-sm uppercase tracking-widest">About Force One Tyres</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight mb-6">
+                Dubai's Premier Destination for Performance & Safety
+              </h2>
+              <div className="w-20 h-1 bg-accent-600 rounded-full mb-8"></div>
+              
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6 font-light leading-relaxed">
+                At Force One Tyres, we don't just sell rubber; we provide peace of mind. As an authorized distributor for world-class brands like Accelera, Winrun, Gepormax, and Duraman, we ensure that your vehicle is equipped with the exact engineering it needs to conquer UAE roads.
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-10 font-light leading-relaxed">
+                From luxury electric vehicles to rugged off-road 4x4s, our expert technicians use state-of-the-art alignment and balancing technology to guarantee your safety, comfort, and driving pleasure.
+              </p>
+
+              <div className="grid grid-cols-2 gap-6 mb-10">
+                <div className="flex items-start">
+                  <svg className="w-6 h-6 text-accent-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white">Authorized Dealer</h4>
+                    <p className="text-sm text-gray-500">100% Genuine Products</p>
+                  </div>
+                </div>
+                <div className="flex items-start">
+                  <svg className="w-6 h-6 text-accent-600 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white">Expert Fitting</h4>
+                    <p className="text-sm text-gray-500">Precision & Safety</p>
+                  </div>
+                </div>
+              </div>
+
+              <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-gray-900 dark:bg-accent-600 hover:bg-accent-600 dark:hover:bg-accent-500 rounded-full transition-colors group">
+                Discover Our Services
+                <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              </Link>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Why Choose Us — Stats / USPs */}
       <section className="w-full bg-white dark:bg-charcoal-950 py-20 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -180,22 +205,22 @@ export default function Home() {
               {
                 title: "Passenger / Sedan",
                 description: "Comfort, low noise, and fuel efficiency for daily driving.",
-                image: "/assets/category-sedan.jpg",
+                image: "/assets/accelera/Eco Plus/Eco Plush (A).png",
               },
               {
                 title: "SUV / 4x4",
                 description: "Rugged grip and durability for off-road and highway alike.",
-                image: "/assets/category-suv.jpg",
+                image: "/assets/accelera/Desert Expedition/Desert Expedition copy.png",
               },
               {
                 title: "EV / Electric",
                 description: "Low rolling resistance and high load capacity for EVs.",
-                image: "/assets/ev-tyre.jpg",
+                image: "/assets/accelera/IOTA EVT/Iota EVT (A).png",
               },
               {
                 title: "High Performance",
                 description: "Maximum grip and handling for spirited driving.",
-                image: "/assets/category-performance.jpg",
+                image: "/assets/accelera/IOTA ST68/Iota ST68 (A).png",
               },
             ].map((category) => (
               <Link
@@ -203,17 +228,20 @@ export default function Home() {
                 href="/brands"
                 className="group relative rounded-2xl overflow-hidden aspect-[3/4] block shadow-lg dark:shadow-none"
               >
+                {/* Clean dark background for the floating tyre */}
+                <div className="absolute inset-0 bg-charcoal-900 z-0"></div>
+                
                 <Image
                   src={category.image}
                   alt={category.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="object-contain p-6 pb-20 transition-transform duration-700 group-hover:scale-110 drop-shadow-2xl z-10"
                 />
-                {/* Dark overlay for contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-20"></div>
 
                 {/* Content */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-accent-400 transition-colors">
                     {category.title}
                   </h3>
